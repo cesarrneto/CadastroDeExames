@@ -1,0 +1,82 @@
+﻿@page "/exames"
+@page "/exames/{id}"
+
+@using Exames_Clinpop.Client.Services;
+@inject IExameService ExameService
+@inject NavigationManager NavigationManager
+
+@if (Id is null)
+{
+    <PageTitle>Novo Exame</PageTitle>
+    <h3>Novo Exame:</h3>
+}
+else
+{
+    <PageTitle>Editar @exame.NomeExame</PageTitle>
+    <h3>Editar @exame.NomeExame</h3>
+}
+
+<EditForm Model="exame" OnSubmit="HandleSubmit">
+    <div>
+        <label for="title">Nome</label>
+        <InputText id="title" @bind-Value="exame.NomeExame" class="form-control" />
+    </div>
+    <div>
+        <label for="category">Descrição</label>
+        <InputText id="category" @bind-Value="exame.DescricaoExame" class="form-control" />
+    </div>
+    <div>
+        <label for="price">Preço</label>
+        <InputNumber id="price" @bind-Value="exame.Preco" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">@btnText</button>
+    <button type="button" class="btn btn-danger"
+    @onclick="DeleteExame">
+        Excluir Exame
+    </button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    string btnText = string.Empty;
+
+    Exames_Clinpop.Shared.Modelos.Exame exame =
+        new Exames_Clinpop.Shared.Modelos.Exame { NomeExame = "Novo exame" };
+
+    protected override void OnInitialized()
+    {
+        btnText = Id == null ? "Salve Novo Exame" : "Update Exame";
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var result = await ExameService.GetExameById((int)Id);
+            if (result is not null)
+                exame = result;
+            else
+                NavigationManager.NavigateTo("/exames");
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id is null)
+        {
+            await ExameService.CreateExame(exame);
+        }
+        else
+        {
+            await ExameService.UpdateExame((int)Id, exame);
+        }
+    }
+
+    async Task DeleteExame()
+    {
+        await ExameService.DeleteExame(exame.ExameId);
+    }
+}

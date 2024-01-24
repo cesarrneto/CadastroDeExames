@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Exames_Clinpop.Server.props" />
+</Project>

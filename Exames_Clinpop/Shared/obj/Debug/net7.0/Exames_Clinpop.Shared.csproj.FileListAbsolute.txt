@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\bin\Debug\net7.0\Exames_Clinpop.Shared.deps.json
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\bin\Debug\net7.0\Exames_Clinpop.Shared.runtimeconfig.json
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\bin\Debug\net7.0\Exames_Clinpop.Shared.dll
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\bin\Debug\net7.0\Exames_Clinpop.Shared.pdb
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\Exames_Clinpop.Shared.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\Exames_Clinpop.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\Exames_Clinpop.Shared.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\Exames_Clinpop.Shared.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\Exames_Clinpop.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\Exames_Clinpop.Shared.dll
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\refint\Exames_Clinpop.Shared.dll
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\Exames_Clinpop.Shared.pdb
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\Exames_Clinpop.Shared.genruntimeconfig.cache
+C:\Users\Usuario\source\repos\Exames_Clinpop\Exames_Clinpop\Shared\obj\Debug\net7.0\ref\Exames_Clinpop.Shared.dll

@@ -1,0 +1,63 @@
+﻿@page "/exame"
+@using Exames_Clinpop.Client.Services;
+@inject IExameService ExameService
+@inject NavigationManager NavigationManager
+
+<h3>Exames</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var exame in ExameService.Exames)
+        {
+            <tr>
+                <td>@exame.NomeExame</td>
+                <td>@exame.DescricaoExame</td>
+                <td>@exame.Preco</td>
+                <td>
+                    <button class="btn btn-primary"
+                    @onclick="(() => ShowExames(exame.ExameId))">
+                        <i class="oi oi-pencil"></i>
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button class="btn btn-primary"
+@onclick="CreateNewExames">
+    Criar Novo Exame
+</button>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await ExameService.GetExames();
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+
+    }
+
+    void ShowExames(int id)
+    {
+        NavigationManager.NavigateTo($"exames/{id}");
+    }
+
+    void CreateNewExames()
+    {
+        NavigationManager.NavigateTo("/exames");
+    }
+}
+
